@@ -1,0 +1,10 @@
+{
+  "presets": [["env",{
+    "targets": {
+      "browsers": ["> 5%","ie > 9"],
+      "uglify": true
+    }
+  }]],
+  "plugins": ["transform-runtime","transform-object-rest-spread","syntax-dynamic-import"],
+  "comments": false
+}
