@@ -39,9 +39,6 @@
     margin-left: 40%;
 }
 
-.header{
-    margin-left: 50px;
-}
 .clickButton {
     background: #fff;
     -webkit-appearance: none;

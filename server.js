@@ -10,17 +10,13 @@ var port = process.env.PORT || 8400
 app.use(express.static(path.join(__dirname, 'dist')))
 app.use(favicon(path.join(__dirname, 'dist', 'favicon.ico')))
 
-app.get('/*', function(req, res) {
-  return res.sendFile(__dirname + '/dist/index.html')
-})
-
-app.get('testUrlGet', function (req, res) {
+app.get('/test-url', function (req, res) {
   res.json({
-    //do something
+    "message" : "Hi i am a get response"
   })
 })
 
-app.post('testUrlPost', function (req, res) {
+app.post('/test-url', function (req, res) {
 
   res.json({
     "message" : "Hi i am a post response"
