@@ -5,9 +5,7 @@ import {API_ROOT} from '../config'
 Vue.use(VueResource)
 
 // HTTP
-Vue.http.options.credentials = true
 Vue.http.options.crossOrigin = true;
-Vue.http.options.xhr = {withCredentials: true};
 
 Vue.http.interceptors.push((request, next)=>{
   request.headers = request.headers || {}

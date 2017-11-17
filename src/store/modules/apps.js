@@ -15,7 +15,17 @@ const actions = {
       if(!response.ok){
         return commit(TEST_FAILURE)
       }
-      commit(TEST_SUCCESS, { message: "Hey , You are awesome Dude!!" })
+      commit(TEST_SUCCESS, { message: response.data.message })
+    }, response => {
+      commit(TEST_FAILURE)
+    })
+  },
+  getData ({ commit}){
+    api.getData().then(response => {
+      if(!response.ok){
+        return commit(TEST_FAILURE)
+      }
+      commit(TEST_SUCCESS, { message: response.data.message })
     }, response => {
       commit(TEST_FAILURE)
     })

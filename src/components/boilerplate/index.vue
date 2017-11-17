@@ -3,11 +3,9 @@
         <div>
             <h1 style="margin-left:10%">{{ message }} </h1>
 
-            <input  class="clickButton" type="button" @click.prevent="postLogin({message})" value="CLICK ME"/>
+            <input  class="clickButton" type="button" @click.prevent="getData" value="CLICK ME"/>
         </div>
     </div>
-
-
 </template>
 <script>
   import { mapState, mapActions } from 'vuex'
@@ -28,7 +26,8 @@
     },
     methods: {
     ...mapActions([
-         'postLogin'
+         'postLogin',
+         'getData'
        ])
     }
   }

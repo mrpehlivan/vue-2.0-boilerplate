@@ -6,6 +6,9 @@ export default {
   //api methods will write to here
   postData: function (data) {
     return testResources.save(data);
+  },
+  getData: function () {
+    return testResources.get();
   }
 }
 
